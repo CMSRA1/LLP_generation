@@ -12,6 +12,14 @@ source /cvmfs/cms.cern.ch/crab3/crab.sh
 voms-proxy-init --voms cms --valid 168:00
 ```
 
+Run the above commands before the "Only once" section. Run the following after
+the "Only once" section:
+```bash
+cd CMSSW_8_0_21/src
+cmsenv
+cd -
+```
+
 ### Only once
 Create a directory to keep all your LLP files and directories and move into it.
 Checkout the master branch of this repository:
@@ -27,7 +35,7 @@ cmsrel CMSSW_8_0_21
 cd CMSSW_8_0_21/src
 cmsenv
 mkdir -p Configuration/GenProduction/python/
-cp ../../T1qqqqLL_cfg.py Configuration/GenProduction/python/
+cp ../../fragments/T1qqqqLL_fragment.py Configuration/GenProduction/python/
 scram b -j 9
 cd -
 ```
