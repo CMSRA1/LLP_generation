@@ -102,3 +102,6 @@ ENV/
 
 # ROOT files
 *.root
+
+# CMSSW
+CMSSW_*/
