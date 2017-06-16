@@ -57,7 +57,7 @@ cmsDriver.py Configuration/GenProduction/python/T1qqqqLL_fragment.py \
     --step GEN,SIM \
     --magField 38T_PostLS1  \
     --fileout file:T1qqqqLL_GEN-SIM.root \
-    --python_filename T1qqqqLL_GEN-SIM_cfg.py \
+    --python_filename step1_T1qqqqLL_GEN-SIM_cfg.py \
     --no_exec \
     -n 50
 ```
@@ -65,8 +65,7 @@ cmsDriver.py Configuration/GenProduction/python/T1qqqqLL_fragment.py \
 ### PU Mixing
 Run the PU mixing step over all events produced by the GEN-SIM step
 ```bash
-cmsDriver.py step1 \
-    --mc \
+cmsDriver.py --mc \
     --eventcontent PREMIXRAW \
     --datatier GEN-SIM-RAW \
     --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v6 \
@@ -76,6 +75,7 @@ cmsDriver.py step1 \
     --era Run2_2016 \
     --filein file:T1qqqqLL_GEN-SIM.root \
     --fileout file:T1qqqqLL_PUMix.root \
+    --python_filename step2_T1qqqqLL_PUMix_cfg.py \
     --pileup_input "/store/mc/RunIISpring15PrePremix/Neutrino_E-10_gun/GEN-SIM-DIGI-RAW/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v2-v2/90023/FED016AB-6A85-E611-96E7-002590A80DF0.root" \
     --no_exec \
     -n -1
@@ -83,8 +83,7 @@ cmsDriver.py step1 \
 
 ### AODSIM
 ```bash
-cmsDriver.py step2 \
-    --mc \
+cmsDriver.py --mc \
     --eventcontent AODSIM,DQM \
     --runUnscheduled \
     --datatier AODSIM,DQMIO \
@@ -94,14 +93,14 @@ cmsDriver.py step2 \
     --era Run2_2016 \
     --filein file:T1qqqqLL_PUMix.root \
     --fileout file:T1qqqqLL_AODSIM.root \
+    --python_filename step3_T1qqqqLL_AODSIM_cfg.py \
     --no_exec \
     -n -1
 ```
 
 ### MINIAODSIM
 ```bash
-cmsDriver.py step1 \
-    --mc \
+cmsDriver.py --mc \
     --eventcontent MINIAODSIM \
     --runUnscheduled \
     --datatier MINIAODSIM \
@@ -110,6 +109,7 @@ cmsDriver.py step1 \
     --era Run2_2016 \
     --filein file:T1qqqqLL_AODSIM.root \
     --fileout file:T1qqqqLL_MINIAODSIM.root \
+    --python_filename step4_T1qqqqLL_MINIAODSIM_cfg.py \
     --no_exec \
     -n -1
 ```

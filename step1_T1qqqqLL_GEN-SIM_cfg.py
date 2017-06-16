@@ -2,7 +2,7 @@
 # using: 
 # Revision: 1.19 
 # Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
-# with command line options: Configuration/GenProduction/python/T1qqqqLL_fragment.py --mc --eventcontent RAWSIM --customise_commands process.source.numberEventsInLuminosityBlock = cms.untracked.uint32(50) \n process.source.firstRun = cms.untracked.uint32(3) \n process.generator.initialSeed = cms.untracked.uint32(3) --datatier GEN-SIM --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v6 --beamspot Realistic50ns13TeVCollision --step GEN,SIM --magField 38T_PostLS1 --fileout file:T1qqqqLL_GEN-SIM.root --python_filename T1qqqqLL_cfg.py --no_exec -n 50
+# with command line options: Configuration/GenProduction/python/T1qqqqLL_fragment.py --mc --eventcontent RAWSIM --customise_commands process.source.numberEventsInLuminosityBlock = cms.untracked.uint32(50) \n process.source.firstRun = cms.untracked.uint32(3) \n process.generator.initialSeed = cms.untracked.uint32(3) --datatier GEN-SIM --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v6 --beamspot Realistic50ns13TeVCollision --step GEN,SIM --magField 38T_PostLS1 --fileout file:T1qqqqLL_GEN-SIM.root --python_filename step1_T1qqqqLL_GEN-SIM_cfg.py --no_exec -n 50
 import FWCore.ParameterSet.Config as cms
 
 process = cms.Process('SIM')
