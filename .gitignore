@@ -99,3 +99,9 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# ROOT files
+*.root
+
+# CMSSW
+CMSSW_*/
