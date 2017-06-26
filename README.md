@@ -21,8 +21,8 @@ cd LLP_generation
 ```
 
 ## Commands to produce the CMSSW config files
-This repository already contains the files produced by the following commands.
-But for reference, here are the commands for each step.
+The `cmsDriver.py` commands used to produce the CMSSW config files can be found
+in the READMEs of the respective subdirectories of this repository.
 
 ## How to submit
 To submit locally, just run pass the CMSSW config file to cmsRun:
