@@ -123,10 +123,10 @@ maxDM = 1000
 
 
 scanBlocks = []
-scanBlocks.append(gridBlock(600,  1200, 100, 100))
-scanBlocks.append(gridBlock(1200, 2301, 50, 100))
+scanBlocks.append(gridBlock(600,  650, 100, 100))
+#scanBlocks.append(gridBlock(1200, 2301, 50, 100))
 minDM = 25
-ymin, ymed, ymax = 0, 500, 1600
+ymin, ymed, ymax = 0, 50, 100
 
 
 # Number of events for mass point, in thousands
